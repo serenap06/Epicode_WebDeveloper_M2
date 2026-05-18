@@ -1,0 +1,47 @@
+* {
+    margin: 5;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: rgb(25, 33, 85);
+}
+
+h1 {
+    background: linear-gradient(to right, #8a2be2, #ff007f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+button {
+    background-color: #8a2be2;
+    font-weight: bold;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input {
+    color:#8a2be2 ;
+}
+
+input::placeholder {
+    color:#8a2be2;
+    opacity: 0.5;
+}
+
+div.tableContainer {
+    margin-top: 20px;
+}
+
+th {
+    font-weight: 400;
+}
