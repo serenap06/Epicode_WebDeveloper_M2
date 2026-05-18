@@ -14,7 +14,10 @@
 </head>
 
 <body>
+    <header>
     <h1>Find your job</h1>
+    <p></p>
+    </header>
     <main>
         <div>
             <form>
@@ -25,10 +28,17 @@
         </div>
         <div class="tableContainer">
             <table id="table">
-                <tr>
-                    <th>Title</th>
-                    <th>Location</th>
-                </tr>
+                <thead>
+                    <tr id="firstCells">
+                        <th class="titleCell">Title</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <td></td>
+                </tbody>
+
+
             </table>
         </div>
     </main>

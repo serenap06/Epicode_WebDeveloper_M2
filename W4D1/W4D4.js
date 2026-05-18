@@ -127,13 +127,14 @@ const jobs = [
 const inputTitle = document.getElementById("title")
 const inputLocation = document.getElementById("location")
 const form = document.querySelector("form")
-const table = document.getElementById("table")
+const tableBody = document.getElementById("tableBody")
+
 
 // funzione di ricerca
 
 function search(title, location) {
-  const inputTitle = title.toLowerCase()
-  const inputLocation = location.toLowerCase()
+  const inputTitle = title.toLowerCase().trim()
+  const inputLocation = location.toLowerCase().trim()
   let result = []
 
   // condizione con input vuoti
@@ -148,8 +149,8 @@ function search(title, location) {
   // ciclo for per iterare l'array job 
 
   for (const job of jobs) {
-    const normalizedJobTitle = job.title.toLowerCase()
-    const normalizedJobLocation = job.location.toLowerCase()
+    const normalizedJobTitle = job.title.toLowerCase().trim()
+    const normalizedJobLocation = job.location.toLowerCase().trim()
 
     // condizione con input inclusi nell'array job
 
@@ -175,7 +176,7 @@ function addResultTableRaw(title, location) {
 
   row.append(cellTitle, cellLocation)
   row.setAttribute("class", "newRow")
-  table.appendChild(row)
+  tableBody.appendChild(row)
 }
 
 // funzione per ritornare il valore degli input inseriti dall'utente 
@@ -194,22 +195,22 @@ function generateEmptyMessage() {
   if (noResult !== null) {
     return
   }
-  const row = document.querySelector("tr")
-  
+  const row = document.createElement("tr")
+  const cell = document.createElement("td")
 
   row.setAttribute("class", "no-result-msg")
-  row.setAttribute("colspan", "2")
-
+  cell.setAttribute("colspan", "2")
   row.style.textAlign="center"
   row.innerText = "No result"
 
-
-  table.appendChild(row)
+  row.appendChild(cell)
+  tableBody.appendChild(row)
 }
 
 // funzione per aggiungere i risultati alla tabella 
 
 form.addEventListener("submit", (e) => {
+  firstCellsVisibility()
   e.preventDefault()
   const inputValues = getInputValues()
   const searchResult = search(inputValues.title, inputValues.location)
@@ -235,4 +236,11 @@ form.addEventListener("submit", (e) => {
   }
 }
 )
+
+const cellVisibility = document.getElementById("firstCells")
+function firstCellsVisibility(){
+  if(cellVisibility){
+    cellVisibility.style.visibility= "visible"
+}
+}
 
