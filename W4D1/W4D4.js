@@ -200,7 +200,7 @@ function generateEmptyMessage() {
 
   row.setAttribute("class", "no-result-msg")
   cell.setAttribute("colspan", "2")
-  row.style.textAlign="center"
+  row.style.textAlign = "center"
   row.innerText = "No result"
 
   row.appendChild(cell)
@@ -238,9 +238,10 @@ form.addEventListener("submit", (e) => {
 )
 
 const cellVisibility = document.getElementById("firstCells")
-function firstCellsVisibility(){
-  if(cellVisibility){
-    cellVisibility.style.visibility= "visible"
-}
+
+function firstCellsVisibility() {
+  if (cellVisibility) {
+    cellVisibility.style.visibility = "visible"
+  }
 }
 

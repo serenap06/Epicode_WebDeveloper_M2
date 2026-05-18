@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 5;
     padding: 0;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Inter, sans-serif;
     color: white;
     background-color: rgb(25, 33, 85);
 }
@@ -49,16 +51,16 @@ div.tableContainer {
     table-layout: fixed;
     width: 100%;
     border-spacing: 0 10px;
-    font-size:large;
+    font-size: large;
 }
 
 #firstCells {
     font-weight: 600;
     color: #c320ec;
     visibility: hidden;
+    font-size: larger;
 }
 
 .titleCell {
     width: 60%;
-    font-size: larger;
 }
